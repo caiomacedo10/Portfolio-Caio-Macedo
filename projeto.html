@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projeto — Detalhes</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primaria:#4f46e5; --secundaria:#7c3aed; --escuro:#0f172a; --maisEscuro:#0a0f1c; --claro:#e2e8f0;
+      --glass-border: rgba(255,255,255,0.08); --radius-lg:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Poppins',system-ui,Arial; color:var(--claro);
+      background:
+        radial-gradient(1200px 600px at 50% -200px, rgba(124,58,237,.12), transparent 60%),
+        linear-gradient(180deg, var(--maisEscuro) 0%, var(--escuro) 45%);
+      min-height:100vh; padding:40px 18px;
+      display:flex; justify-content:center;
+    }
+
+    .wrap{width:100%;max-width:1400px;padding:18px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border:1px solid var(--glass-border); border-radius:14px; padding:18px;
+      box-shadow:0 10px 30px rgba(2,6,23,.55);
+    }
+
+    .back{display:inline-block;color:#c4b5fd;text-decoration:none;margin-bottom:12px;font-weight:600;}
+
+    .project-grid{
+      display:grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
+      gap:28px;
+      align-items:start;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 100%;       
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0b1220;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      height: 100%;
+      will-change: transform;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;         
+      max-height: 80vh;      
+      object-fit: contain;  
+      border-radius: 12px;
+      display: block;
+    }
+
+    .carousel .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.55);
+      border: none;color:#fff;
+      width: 46px;height:46px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;font-size:22px;z-index:20;
+      transition: background .18s ease;
+    }
+    .carousel .arrow:hover{background:rgba(79,70,229,0.85)}
+    .carousel .prev{left:12px}
+    .carousel .next{right:12px}
+
+    .indicators{
+      display:flex;gap:8px;justify-content:center;padding:12px 0;margin-top:12px;
+    }
+    .indicators button{
+      width:11px;height:11px;border-radius:50%;border:none;background:rgba(255,255,255,.25);cursor:pointer;
+    }
+    .indicators button.active{background:var(--primaria)}
+
+    .info { padding:12px; }
+    .info h1{
+      font-family:'Playfair Display',serif;color:var(--secundaria);font-size:30px;margin-bottom:10px;
+      text-shadow:0 0 12px rgba(124,58,237,.28);
+    }
+    .info .subtitle{color:rgba(226,232,240,.85);margin-bottom:12px}
+    .info .desc{color:rgba(226,232,240,.92);line-height:1.6}
+    .meta-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .pill{background:rgba(255,255,255,.02);border:1px solid var(--glass-border);padding:8px 10px;border-radius:10px;font-size:13px}
+    .actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;border:none;
+      background:linear-gradient(90deg,var(--primaria),var(--secundaria));color:white;text-decoration:none;font-weight:700;
+      cursor:pointer;box-shadow:0 8px 26px rgba(79,70,229,0.12)
+    }
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+
+   
+    @media (max-width:980px){
+      .project-grid{grid-template-columns:1fr}
+      .info{order:2}
+      .carousel{
+        order:1;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+      .slide img {
+        max-height: 70vh;   
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Voltar ao Portfólio</a>
+
+    <div class="card" id="project-card">
+      <div id="content-area">
+        <div class="project-grid">
+       
+          <div>
+            <div class="carousel" id="carousel" aria-live="polite" aria-label="Galeria de imagens do projeto"></div>
+            <div class="indicators" id="indicators" aria-hidden="false"></div>
+          </div>
+
+        
+          <aside class="info" id="info">
+            <h1 id="titulo">Projeto</h1>
+            <div class="subtitle" id="subtitle">Subtítulo / Tipo</div>
+            <div class="desc" id="descricao">Descrição do projeto...</div>
+            <div class="meta-grid" id="meta"></div>
+            <div class="actions" id="actions">
+              <a id="verCodigo" class="btn" href="#" target="_blank" rel="noopener">💻 Ver Código</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/projetos.js"></script>
+  <script>
+    function createImage(src, alt) {
+      const img = document.createElement('img');
+      img.src = encodeURI(src);
+      img.alt = alt || '';
+      img.loading = 'lazy';
+      img.addEventListener('error', function() {
+        const tryOne = src.replace(/\s+/g,' ').trim();
+        if (tryOne !== src) { this.src = encodeURI(tryOne); return; }
+        this.src = 'img/placeholder.png';
+      });
+      return img;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const p = (typeof window.getProjetoById === 'function') ? window.getProjetoById() : null;
+      const tituloEl = document.getElementById('titulo');
+      const subtitleEl = document.getElementById('subtitle');
+      const descEl = document.getElementById('descricao');
+      const metaEl = document.getElementById('meta');
+      const verCodigoBtn  = document.getElementById('verCodigo');
+      const carousel = document.getElementById('carousel');
+      const indicators = document.getElementById('indicators');
+
+      if(!p){
+        tituloEl.textContent = 'Projeto não encontrado';
+        subtitleEl.textContent = '';
+        descEl.textContent = 'O projeto solicitado não foi encontrado.';
+        carousel.innerHTML = '<div style="padding:36px;text-align:center;color:rgba(226,232,240,.6)">Imagem indisponível</div>';
+        return;
+      }
+
+      tituloEl.textContent = p.nome || 'Projeto';
+      subtitleEl.textContent = p.tipo || (p.tags ? p.tags.join(' • ') : '');
+      descEl.textContent = p.descricao || '';
+
+      metaEl.innerHTML = '';
+      if(p.ano) { const d=document.createElement('div'); d.className='pill'; d.textContent = '📅 ' + p.ano; metaEl.appendChild(d); }
+      if(p.tags && p.tags.length){
+        p.tags.forEach(t => { const d=document.createElement('div'); d.className='pill'; d.textContent = t; metaEl.appendChild(d); });
+      }
+
+      if(p.linkCodigo && p.linkCodigo !== '#') verCodigoBtn.href = p.linkCodigo;
+      else verCodigoBtn.setAttribute('disabled','');
+
+      const imagens = Array.isArray(p.imagens) && p.imagens.length ? p.imagens : (p.imagem ? [p.imagem] : []);
+      if (typeof window.initCarousel === 'function') {
+        window.initCarousel(carousel, imagens, indicators, { autoplay: false });
+      } else {
+        carousel.innerHTML = '';
+        indicators.innerHTML = '';
+        const track = document.createElement('div');
+        track.className = 'carousel-track';
+        carousel.appendChild(track);
+
+        if (!imagens || imagens.length === 0) {
+          carousel.innerHTML = '<div style="padding:36px;text-align:center;color:rgba(226,232,240,.6)">Sem imagens</div>';
+        } else {
+          imagens.forEach((src, i) => {
+            const slide = document.createElement('div');
+            slide.className = 'slide';
+            const img = createImage(src, p.nome + ' — ' + (i+1));
+            slide.appendChild(img);
+            track.appendChild(slide);
+
+            const dot = document.createElement('button');
+            dot.setAttribute('aria-label', 'Ir para imagem ' + (i+1));
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => showSlide(i));
+            indicators.appendChild(dot);
+          });
+
+          if (imagens.length > 1) {
+            const prev = document.createElement('button');
+            prev.className = 'arrow prev';
+            prev.innerHTML = '❮';
+            prev.addEventListener('click', () => showSlide(current - 1));
+            carousel.appendChild(prev);
+
+            const next = document.createElement('button');
+            next.className = 'arrow next';
+            next.innerHTML = '❯';
+            next.addEventListener('click', () => showSlide(current + 1));
+            carousel.appendChild(next);
+          }
+        }
+
+        let current = 0;
+        function showSlide(n) {
+          const slides = track.querySelectorAll('.slide');
+          const dots = indicators.querySelectorAll('button');
+          if (!slides.length) return;
+          current = (n + slides.length) % slides.length;
+          track.style.transform = `translateX(-${current * 100}%)`;
+          dots.forEach(d => d.classList.remove('active'));
+          if (dots[current]) dots[current].classList.add('active');
+        }
+
+        document.addEventListener('keydown', function(ev){
+          if(ev.key === 'ArrowLeft') showSlide(current-1);
+          if(ev.key === 'ArrowRight') showSlide(current+1);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

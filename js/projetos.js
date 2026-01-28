@@ -3,7 +3,7 @@ const projetos = [
   {
     id: "dev-burguer",
     nome: "Dev Burguer",
-    descricao: "Aplicação Full Stack que simula uma lanchonete digital completa: login, cadastro, vitrine de produtos, carrinho, painel administrativo e pagamentos via Stripe.",
+    descricao: "E-commerce completo de hamburgueria desenvolvido para resolver o desafio de criar uma experiência digital completa de pedidos online. Aplicação Full Stack com autenticação JWT, vitrine de produtos, carrinho de compras inteligente, painel administrativo para gestão e integração de pagamentos seguros via Stripe. Tecnologias: React, Node.js, Express, PostgreSQL, Sequelize e JWT. Principal desafio: implementar fluxo completo de e-commerce com segurança e experiência de usuário fluida.",
     imagens: [
       "img/Devburgerlogin.png",
       "img/DevBurguer.png",
@@ -20,7 +20,7 @@ const projetos = [
   {
        id: "conversor-moedas",
        nome: "Conversor de Moedas",
-       descricao: "Conversor de moedas em tempo real, integrado à API AwesomeAPI, que permite converter entre Real, Dólar, Euro, Libra e Bitcoin. Desenvolvido com HTML, CSS e JavaScript, o projeto utiliza fetch/async/await, formatação internacional com Intl.NumberFormat, manipulação dinâmica do DOM e design responsivo com foco em usabilidade.",
+       descricao: "Ferramenta de conversão de moedas criada para resolver a necessidade de consultas rápidas e precisas de câmbio em tempo real. Integração com AwesomeAPI para cotações atualizadas de Real, Dólar, Euro, Libra e Bitcoin. Tecnologias: HTML5, CSS3, JavaScript vanilla com Fetch API e async/await. Desafio técnico: manipulação dinâmica do DOM, formatação internacional com Intl.NumberFormat e design responsivo com foco em usabilidade.",
       imagens: [
       "img/ConversorDeMoedas.png",
       "img/ConvertMoney.png",
@@ -34,7 +34,7 @@ const projetos = [
   },{
     id: "dev-movies",
     nome: "Dev Movies",
-     descricao: "Aplicação desenvolvida em React.js integrada à TMDb API, que permite explorar filmes e séries com detalhes completos, incluindo trailers, elenco e recomendações. Utiliza Axios, React Router DOM e Styled-Components para garantir navegação fluida, consumo dinâmico de dados e design moderno responsivo.",
+     descricao: "Catálogo interativo de filmes e séries desenvolvido para resolver o problema de descoberta de conteúdo audiovisual. Integração completa com TMDb API para explorar catálogo global, visualizar trailers, elenco, avaliações e recomendações personalizadas. Tecnologias: React.js, Axios, React Router DOM e Styled-Components. Desafio: consumo eficiente de API externa, roteamento dinâmico e componentização para interface moderna e responsiva.",
     imagens: [
       "img/DevMoviesCapa.png",
       "img/DevmoviesArtistas.png",
@@ -51,7 +51,7 @@ const projetos = [
   {
       id: "dev-bills",
     nome: "Dev Bills",
-     descricao: "Plataforma completa de gerenciamento financeiro desenvolvida com React + TypeScript e Tailwind CSS no front-end, integrada a um backend em Node.js, Prisma, MongoDB e Fastify. Possui autenticação com Google, dashboard interativo com gráficos, controle de receitas e despesas, categorias personalizadas e interface moderna totalmente responsiva.",
+     descricao: "Sistema de gestão financeira pessoal criado para resolver o problema de controle de receitas e despesas de forma visual e intuitiva. Plataforma Full Stack com dashboard interativo, gráficos dinâmicos e categorização personalizada. Destaque para consumo de API REST própria desenvolvida com Node.js, Fastify e MongoDB, integrada ao front-end React + TypeScript. Tecnologias: React, TypeScript, Tailwind CSS, Node.js, Prisma, MongoDB, Fastify e autenticação Google OAuth. Desafio: criar API robusta e dashboard responsivo com visualização de dados em tempo real.",
     imagens: [
       "img/DevBillsCapa.png",
       "img/DevBillsTransactions1.png",
@@ -67,7 +67,7 @@ const projetos = [
   {
    id: "cafeteria-caio",
     nome: "Cafeteria do Caio",
-    descricao: "Website moderno e responsivo desenvolvido em HTML5, CSS3 e JavaScript, com navegação fluida, cardápio interativo e design elegante inspirado em cafeterias artesanais. Conta com layout responsivo, efeitos de animação, seção de contato e experiência visual envolvente para destacar o melhor café da cidade.",
+    descricao: "Website institucional para cafeteria artesanal, criado para apresentar produtos e ambiente de forma elegante e profissional. Landing page moderna com cardápio interativo, seção de contato e design inspirado em cafeterias boutique. Tecnologias: HTML5 semântico, CSS3 com animações e JavaScript vanilla. Desafio: criar experiência visual envolvente mantendo performance e responsividade em todos os dispositivos.",
     imagens: [
       "img/CafeteriaPorfolio.png",
       "img/CafeteriaPortfolio2.png",
@@ -80,7 +80,7 @@ const projetos = [
   {
      id: "cadastro-usuarios",
     nome: "Cadastro de Usuários",
-  descricao: "Aplicação full-stack desenvolvida com React no front-end e Node.js no back-end, permitindo cadastro e exclusão de usuários com exibição de avatares aleatórios via API. Interface moderna, fluida e responsiva, construída para oferecer uma experiência simples e eficiente.",
+  descricao: "Sistema CRUD de gerenciamento de usuários desenvolvido para demonstrar integração Full Stack básica. Permite cadastro, listagem e exclusão de usuários com avatares aleatórios via API externa. Tecnologias: React no front-end e Node.js + Express no back-end. Desafio: criar interface fluida e responsiva com operações assíncronas e feedback visual imediato para o usuário.",
     imagens: [
       "img/CadastroDeUsuarios.png",
       "img/ListaDeUsuarios.png",

@@ -72,7 +72,7 @@ const projetos = [
       "img/CafeteriaPorfolio.png",
       "img/CafeteriaPortfolio2.png",
     ],
-    tags: ["HTML", "CSS", "Design Moderno", "Responsivo"],
+    tags: ["HTML", "CSS", "Modern Design", "Responsive"],
     linkProjeto: "#",
     linkCodigo: "https://github.com/caiomacedo10/treinando.git",
     ano: "2025"
